@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Transform Your Body, Transform Your Life</h1>
+        <p>Join thousands of people who have changed their lives with our fitness programs.</p>
+        <a href="{{ url_for('workouts') }}" class="btn">Get Started</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Custom Workouts</h3>
+                <p>Personalized workout plans tailored to your fitness level and goals.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-utensils"></i>
+                <h3>Nutrition Plans</h3>
+                <p>Healthy eating plans designed to complement your fitness routine.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chart-line"></i>
+                <h3>Track Progress</h3>
+                <p>Monitor your improvements and stay motivated with our tracking tools.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

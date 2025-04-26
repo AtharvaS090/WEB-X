@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Message Sent Successfully{% endblock %}
+
+{% block content %}
+<section class="success-hero">
+    <div class="container">
+        <h1>Thank You, {{ name }}!</h1>
+        <p>Your message has been sent successfully.</p>
+    </div>
+</section>
+
+<section class="success-content">
+    <div class="container">
+        <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h2>We've Received Your Message</h2>
+            <p>Thank you for reaching out to us. Our team will review your message and get back to you as soon as possible.</p>
+            <p>Typically, we respond within 24-48 hours during our business hours.</p>
+            
+            <div class="success-actions">
+                <a href="{{ url_for('home') }}" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Return Home
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Send Another Message
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

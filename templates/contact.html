@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="{{ url_for('contact') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Other Ways to Reach Us</h2>
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>123 Fitness Street<br>Chembur Camp</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>5246859865</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>fitlife@gmail.com</p>
+            </div>
+            
+            <div class="business-hours">
+                <h3>Business Hours</h3>
+                <p>Monday-Friday: 8am-8pm<br>
+                Saturday: 9am-5pm<br>
+                Sunday: 10am-4pm</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

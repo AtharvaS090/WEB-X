@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="container">
+        <h1>About FitLife</h1>
+    </div>
+</section>
+
+<section class="about-content">
+    <div class="container">
+        <div class="about-text">
+            <h2>Our Mission</h2>
+            <p>At FitLife, we believe that fitness is not just about looking good, but about feeling great and living a healthier, happier life. Our mission is to make fitness accessible to everyone, regardless of their current fitness level or experience.</p>
+            
+            <h2>Our Story</h2>
+            <p>Founded in 2020 by a team of fitness enthusiasts and certified trainers, FitLife started as a small local gym. Today, we've grown into a comprehensive fitness platform helping thousands of people worldwide achieve their health and fitness goals.</p>
+            
+            <h2>Our Team</h2>
+            <p>Our team consists of certified personal trainers, nutritionists, and fitness experts who are passionate about helping you succeed. We combine scientific approaches with practical experience to create effective fitness solutions.</p>
+        </div>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/trainer1.jpg') }}" alt="Trainer">
+                <h3>Atharva Shinde</h3>
+                <p>Head Trainer</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/trainer2.jpg') }}" alt="Trainer">
+                <h3>Anna Bella</h3>
+                <p>Nutrition Expert</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/trainer3.jpg') }}" alt="Trainer">
+                <h3>Aman Yadav</h3>
+                <p>Yoga Specialist</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

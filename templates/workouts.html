@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block title %}Workouts{% endblock %}
+
+{% block content %}
+<section class="workouts-hero">
+    <div class="container">
+        <h1>Workout Programs</h1>
+        <p>Choose the program that fits your goals</p>
+    </div>
+</section>
+
+<section class="workout-programs">
+    <div class="container">
+        <div class="program-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="beginner">Beginner</button>
+            <button class="category-btn" data-category="intermediate">Intermediate</button>
+            <button class="category-btn" data-category="advanced">Advanced</button>
+        </div>
+        
+        <div class="programs-grid">
+            <div class="program-card" data-category="beginner">
+                <img src="{{ url_for('static', filename='images/workout1.jpg') }}" alt="Beginner Full Body">
+                <h3>Beginner Full Body</h3>
+                <p>A perfect starting point for fitness newcomers with no equipment needed.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+            
+            <div class="program-card" data-category="intermediate">
+                <img src="{{ url_for('static', filename='images/workout2.jpg') }}" alt="Strength Training">
+                <h3>Strength Training</h3>
+                <p>Build muscle and increase strength with this intermediate program.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+            
+            <div class="program-card" data-category="advanced">
+                <img src="{{ url_for('static', filename='images/workout3.jpg') }}" alt="HIIT Challenge">
+                <h3>HIIT Challenge</h3>
+                <p>High-intensity interval training for maximum fat burning.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+            
+            <div class="program-card" data-category="beginner">
+                <img src="{{ url_for('static', filename='images/workout4.jpg') }}" alt="Yoga Basics">
+                <h3>Yoga Basics</h3>
+                <p>Improve flexibility and reduce stress with these beginner yoga flows.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+            
+            <div class="program-card" data-category="intermediate">
+                <img src="{{ url_for('static', filename='images/workout5.jpg') }}" alt="Cardio Blast">
+                <h3>Cardio Blast</h3>
+                <p>Boost your endurance and cardiovascular health with this program.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+            
+            <div class="program-card" data-category="advanced">
+                <img src="{{ url_for('static', filename='images/workout6.jpg') }}" alt="Bodyweight Master">
+                <h3>Bodyweight Master</h3>
+                <p>Advanced calisthenics program requiring no equipment.</p>
+                <a href="#" class="btn">View Program</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="weekly-schedule">
+    <div class="container">
+        <h2>Sample Weekly Schedule</h2>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Workout</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Full Body Strength</td>
+                <td>45 mins</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Cardio</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Rest/Yoga</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Upper Body</td>
+                <td>45 mins</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Lower Body</td>
+                <td>45 mins</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>HIIT</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Rest</td>
+                <td>-</td>
+            </tr>
+        </table>
+    </div>
+</section>
+{% endblock %}

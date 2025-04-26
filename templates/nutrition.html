@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Nutrition{% endblock %}
+
+{% block content %}
+<section class="nutrition-hero">
+    <div class="container">
+        <h1>Nutrition Guides</h1>
+        <p>Fuel your body for optimal performance</p>
+    </div>
+</section>
+
+<section class="nutrition-content">
+    <div class="container">
+        <div class="nutrition-intro">
+            <h2>The Importance of Nutrition</h2>
+            <p>Proper nutrition is just as important as exercise when it comes to achieving your fitness goals. Whether you want to lose weight, build muscle, or simply maintain a healthy lifestyle, what you eat plays a crucial role.</p>
+        </div>
+        
+        <div class="nutrition-tips">
+            <h2>Nutrition Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Eat Whole Foods</h3>
+                    <p>Focus on unprocessed foods like fruits, vegetables, lean proteins, and whole grains.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Stay Hydrated</h3>
+                    <p>Drink at least 2-3 liters of water daily to support metabolism and recovery.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Balance Macronutrients</h3>
+                    <p>Include proteins, carbs, and healthy fats in each meal for optimal nutrition.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Meal Timing</h3>
+                    <p>Eat smaller, balanced meals every 3-4 hours to maintain energy levels.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="meal-plans">
+            <h2>Sample Meal Plans</h2>
+            <div class="plan-tabs">
+                <button class="plan-tab active" data-plan="weight-loss">Weight Loss</button>
+                <button class="plan-tab" data-plan="muscle-gain">Muscle Gain</button>
+                <button class="plan-tab" data-plan="maintenance">Maintenance</button>
+            </div>
+            
+            <div class="plan-content active" id="weight-loss">
+                <h3>Weight Loss Plan (1500-1800 calories)</h3>
+                <div class="meal">
+                    <h4>Breakfast</h4>
+                    <p>Oatmeal with berries and almonds (300 cal)</p>
+                </div>
+                <div class="meal">
+                    <h4>Snack</h4>
+                    <p>Greek yogurt with cucumber slices (200 cal)</p>
+                </div>
+                <div class="meal">
+                    <h4>Lunch</h4>
+                    <p>Grilled chicken with steamed vegetables (450 cal)</p>
+                </div>
+                <div class="meal">
+                    <h4>Snack</h4>
+                    <p>Handful of nuts and an apple (250 cal)</p>
+                </div>
+                <div class="meal">
+                    <h4>Dinner</h4>
+                    <p>Baked salmon with sweet potato (400 cal)</p>
+                </div>
+            </div>
+            
+            <div class="plan-content" id="muscle-gain">
+                <h3>Muscle Gain Plan (2500-3000 calories)</h3>
+                
+            </div>
+            
+            <div class="plan-content" id="maintenance">
+                <h3>Maintenance Plan (2000-2200 calories)</h3>
+                
+            </div>
+        </div>
+        
+        <div class="recipes">
+            <h2>Healthy Recipes</h2>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <img src="{{ url_for('static', filename='images/recipe1.jpg') }}" alt="Protein Power">
+                    <h3>Protein Power</h3>
+                    <p>Includes: 1 banana, 1 scoop protein powder, 1 tbsp peanut butter, 1 cup almond milk, ice.</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="{{ url_for('static', filename='images/recipe2.jpg') }}" alt="Salad">
+                    <h3>Veggie Salad</h3>
+                    <p>Mix cooked and chopped veggies, olive oil, lemon juice, and cheese.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Edit Workout{% endblock %}
+
+{% block content %}
+<section class="workout-form">
+    <div class="container">
+        <h1>Edit Workout Plan</h1>
+        <form action="{{ url_for('edit_workout', workout_id=workout._id) }}" method="POST">
+            <div class="form-group">
+                <label for="title">Workout Title</label>
+                <input type="text" id="title" name="title" value="{{ workout.title }}" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required>{{ workout.description }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="strength" {% if workout.category=='strength' %}selected{% endif %}>Strength</option>
+                    <option value="cardio" {% if workout.category=='cardio' %}selected{% endif %}>Cardio</option>
+                    <option value="flexibility" {% if workout.category=='flexibility' %}selected{% endif %}>Flexibility</option>
+                    <option value="hiit" {% if workout.category=='hiit' %}selected{% endif %}>HIIT</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="beginner" {% if workout.difficulty=='beginner' %}selected{% endif %}>Beginner</option>
+                    <option value="intermediate" {% if workout.difficulty=='intermediate' %}selected{% endif %}>Intermediate</option>
+                    <option value="advanced" {% if workout.difficulty=='advanced' %}selected{% endif %}>Advanced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" value="{{ workout.duration }}" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image Filename</label>
+                <input type="text" id="image" name="image" value="{{ workout.image }}">
+            </div>
+            <button type="submit" class="btn">Update Workout</button>
+            <a href="{{ url_for('workouts') }}" class="btn btn-cancel">Cancel</a>
+        </form>
+    </div>
+</section>
+{% endblock %}
